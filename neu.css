@@ -75,8 +75,8 @@ body {
     border-radius: 1em;
     
     background: var(--background);
-    box-shadow:  25px 25px 50px #c9cacd, 
-             -25px -25px 50px #ffffff;
+    box-shadow:  15px 15px 30px #c9cacd, 
+             -15px -15px 30px #ffffff;
 }
 
 /*----- Buttons -----*/
@@ -179,10 +179,9 @@ body {
 
 /*----- Table -----*/
 .neu-table {
-    border-radius: .5em;
-    border: .5px solid var(--light);
-    box-shadow: -20px -20px 20px 0 rgba(255, 255, 255, 1),
-                20px 20px 20px 0 rgba(0, 0, 0, .08);
+    border-radius: 1em;
+    box-shadow:  10px 10px 20px #c9cacd, 
+             -10px -10px 20px #ffffff;
     padding: 3%;
     text-align: center;
 }
@@ -211,6 +210,7 @@ body {
     grid-row: 3 / 4;
     
     margin-top: 7%;
+    margin-left: 20%;
 }
 .neu-footer {
     grid-column: 1 / 6;
@@ -235,6 +235,25 @@ body {
     border: .5px solid var(--light);
 }
 
+/*----- Animations -----*/
+.neu-anim:hover {
+    animation: popup .5s linear;
+}
+@keyframes popup {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.07);
+    }
+    75% {
+        transform: scale(1.04);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 
 /*----- Media queries -----*/
 /*Phones*/
@@ -243,5 +262,15 @@ body {
         grid-template-columns: 3% 15% auto 15% 3%;
         grid-template-rows: 6% 6% auto 15%;
         grid-gap: .5%;
+    }
+}
+/*Tablets*/
+@media only screen and (max-width: 1200px) {
+    .neu-aside {
+        grid-column: 3 / 4;
+        grid-row: 3 / 4;
+    
+        margin-top: 7%;
+        margin-left: 20%;
     }
 }
